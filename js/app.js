@@ -37,6 +37,11 @@ App.ProductsRoute = Ember.Route.extend({
   }
 });
 
+App.ProductRoute = Ember.Route.extend({
+  model: function(params) {
+    return App.PRODUCTS.findBy('title', params.title);
+  }
+});
 
 App.ContactsRoute = Ember.Route.extend({
   model: function() {
