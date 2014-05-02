@@ -52,15 +52,15 @@ App.ContactsRoute = Ember.Route.extend({
 App.PRODUCTS = [
   {
     title: 'Flint',
-    price: 3,
-    description: 'Flint is...',
+    price: 99,
+    description: 'Flint is a hard, sedimentary cryptocrystalline form of the mineral quartz, categorized as a variety of chert.',
     isOnSale: true,
     image: 'images/products/flint.png'
   },
   {
     title: 'Kindling',
-    price: 2,
-    description: 'Kindling is...',
+    price: 249,
+    description: 'Easily combustible small sticks or twigs used for starting a fire.',
     isOnSale: false,
     image: 'images/products/kindling.png'
   }
@@ -69,12 +69,12 @@ App.PRODUCTS = [
 App.CONTACTS = [
   {
     name: 'Giamia',
-    avatar: 'images/contacts/giamia.png',
-    about: 'some stuff about Giamia'
+    about: 'Although Giamia came from a humble spark of lightning, he quickly grew to be a great craftsman, providing all the warming instruments needed by those close to him.',
+    avatar: 'images/contacts/giamia.png'
   },
   {
     name: 'Anostagia',
-    avatar: 'images/contacts/anostagia.png',
-    about: 'some stuff about Anostagia'
+    about: 'Knowing there was a need for it, Anostagia drew on her experience and spearheaded the Flint & Flame storefront. In addition to coding the site, she also creates a few products available in the store.',
+    avatar: 'images/contacts/anostagia.png'
   }
 ];
