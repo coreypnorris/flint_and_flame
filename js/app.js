@@ -36,7 +36,9 @@ App.ProductsRoute = Ember.Route.extend({
   }
 });
 App.ContactsRoute = Ember.Route.extend({
-
+  model: function() {
+    return App.CONTACTS;
+  }
 });
 
 App.PRODUCTS = [
@@ -54,4 +56,17 @@ App.PRODUCTS = [
     isOnSale: false,
     image: 'images/products/kindling.png'
   }
-]
+];
+
+App.CONTACTS = [
+  {
+    name: 'Giamia',
+    avatar: 'images/contacts/giamia.png',
+    about: 'some stuff about Giamia'
+  },
+  {
+    name: 'Anostagia',
+    avatar: 'images/contacts/anostagia.png',
+    about: 'some stuff about Anostagia'
+  }
+];
