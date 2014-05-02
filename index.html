@@ -7,10 +7,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <script type="text/x-handlebars">
-    <h2>Welcome to Ember.js</h2>
+  <script type="text/x-handlebars" data-template-name="application">
+    <div class="navbar navbar-default">
+      <div class="container">
+      <a href="#" class="navbar-brand"><img src="images/logo.png" alt="logo" height="34" width="224" /></a>
+        <ul class="nav navbar-nav navbar-right">
+          <li href="#" class="active">Home</li>
+          <li href="#/about">About</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      {{outlet}}
+    </div>
 
-    {{outlet}}
+    <footer class="container">
+      <hr />
+
+      <p class="pull-left">&copy; 2013 The Flint &amp; Flame</p>
+      <p class="pull-right"><a href="#/credits">Credits</a></p>
+    </footer>
   </script>
 
   <script type="text/x-handlebars" id="index">
@@ -21,7 +37,6 @@
   <script src="js/libs/handlebars-1.1.2.js"></script>
   <script src="js/libs/ember-1.5.1.js"></script>
   <script src="js/app.js"></script>
-  <!-- to activate the test runner, add the "?test" query string parameter -->
-  <script src="tests/runner.js"></script>
+
 </body>
 </html>
