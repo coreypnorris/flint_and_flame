@@ -56,6 +56,7 @@
   </script>
 
   <script type='text/x-handlebars' data-template-name='products'>
+
     <h1>Products</h1>
     <ul class="list-unstyled">
       {{#each product in model}}
@@ -69,6 +70,17 @@
         </li>
       {{/each}}
     </ul>
+
+  </script>
+
+  <script type='text/x-handlebars' data-template-name='contacts'>
+
+    {{#each contact in model}}
+      <p>{{contact.name}}</p>
+      <p>{{contact.about}}</p>
+      <img {{bind-attr src='contact.avatar'}} />
+    {{/each}}
+
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
