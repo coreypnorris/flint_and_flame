@@ -83,11 +83,18 @@
 
   <script type='text/x-handlebars' data-template-name='contacts'>
 
-    {{#each contact in model}}
-      <p>{{contact.name}}</p>
-      <p>{{contact.about}}</p>
-      <img {{bind-attr src='contact.avatar' alt='contact.about'}} />
-    {{/each}}
+    <h1>Contacts</h1>
+    <ul class="list-unstyled">
+      {{#each contact in model}}
+        <li class='row'>
+          <img {{bind-attr src='contact.avatar' alt='contact.name'}} class='img-thumbnail col-sm-5'/>
+          <div class='col-sm-7'>
+            <h2>{{#link-to 'contact' contact}}{{contact.name}}{{/link-to}}</h2>
+            <p>{{contact.about}}</p>
+          </div>
+      </li>
+      {{/each}}
+    </ul>
 
   </script>
 
