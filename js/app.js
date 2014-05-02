@@ -1,5 +1,8 @@
-App = Ember.Application.create();
+App = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});
 
 App.Router.map(function() {
-  // put your routes here
+  this.route('about');
+  this.route('credits');
 });
