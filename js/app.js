@@ -8,6 +8,7 @@ App.Router.map(function() {
   this.resource('products');
   this.resource('product', { path: '/products/:title' });
   this.resource('contacts');
+  this.resource('contact', { path: '/contacts/:name' });
 });
 
 App.IndexController = Ember.Controller.extend({
