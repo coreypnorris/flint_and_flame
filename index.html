@@ -66,6 +66,7 @@
             <h2>{{product.title}}</h2>
             <p class='product-description'>{{product.description}}</p>
             <p><button class='btn btn-success'>Buy for ${{product.price}}</button></p>
+            <p>{{#link-to 'product' this tagName='button' class='btn btn-success'}}Buy for ${{product.price}}</p>
           </div>
         </li>
       {{/each}}
