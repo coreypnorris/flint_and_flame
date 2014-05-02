@@ -6,6 +6,7 @@ App.Router.map(function() {
   this.route('about');
   this.route('credits', { path: '/thanks' });
   this.resource('products');
+  this.resource('product', { path: '/products/:title' });
   this.resource('contacts');
 });
 
@@ -35,6 +36,8 @@ App.ProductsRoute = Ember.Route.extend({
     return App.PRODUCTS;
   }
 });
+
+
 App.ContactsRoute = Ember.Route.extend({
   model: function() {
     return App.CONTACTS;
