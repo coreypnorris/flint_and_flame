@@ -30,11 +30,16 @@
   </script>
 
   <script type='text/x-handlebars' data-template-name='index'>
-      <h1>Welcome to The Flint &amp; Flame!</h1>
-      <p>There are {{productsCount}} products currently for sale</p>
-      <img {{bind-attr src='logo'}} />
-      <p>Rendered on {{time}}</p>
-    </script>
+      <div class='jumbotron'>
+        <h1>Welcome to The Flint &amp; Flame!</h1>
+        <p class='tagline'>
+          <img {{bind-attr src='logo'}} />
+          Everything you need to make it through the winter.
+        </p>
+        <p>Browse All {{productsCount}} Items &raquo;</p>
+        <p class='pull-right text-muted'>Rendered on {{time}}</p>
+      </div>
+  </script>
 
   <script type='text/x-handlebars' data-template-name='about'>
     <h1>About The Fire Spirits</h1>
