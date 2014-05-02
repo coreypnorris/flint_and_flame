@@ -29,3 +29,25 @@ App.AboutController = Ember.Controller.extend({
   }.property()
 });
 
+App.ProductsRoute = Ember.Route.extend({
+  model: function() {
+    return App.PRODUCTS;
+  }
+});
+
+App.PRODUCTS = [
+  {
+    title: 'Flint',
+    price: 3,
+    description: 'Flint is...',
+    isOnSale: true,
+    image: 'images/products/flint.png'
+  },
+  {
+    title: 'Kindling',
+    price: 2,
+    description: 'Kindling is...',
+    isOnSale: false,
+    image: 'images/products/kindling.png'
+  }
+]
