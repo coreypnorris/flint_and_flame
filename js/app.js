@@ -86,6 +86,12 @@ App.Product.FIXTURES = [
   }
 ];
 
+App.Review = DS.Model.extend({
+  text: DS.attr('string'),
+  reviewedAt: DS.attr('date'),
+  product: DS.belongsTo('product')
+});
+
 App.Contact = DS.Model.extend({
   name: DS.attr('string'),
   about: DS.attr('string'),
