@@ -42,7 +42,7 @@
       </div>
   </script>
 
-  <script type='text/x-handlebars' data-template-name='about'>
+  <script type='text/x-handlebars' data-template-name='contacts/index'>
     <h1>About The Fire Spirits</h1>
     <p>{{contactName}}</p>
     <img {{bind-attr src='avatar'}} />
@@ -104,6 +104,18 @@
             {{/link-to}}
           {{/each}}
         </div>
+      </div>
+    </div>
+  </script>
+
+  <script type='text/x-handlebars' data-template-name='contact'>
+    <div class='row'>
+      <div class='col-sm-5'>
+        <img {{bind-attr src='avatar' alt='name'}} class='img-thumbnail img-rounded'/>
+      </div>
+      <div class='col-sm-7'>
+        <h2>{{name}}</h2>
+        <p>{{about}}</p>
       </div>
     </div>
   </script>

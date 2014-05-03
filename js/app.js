@@ -20,19 +20,6 @@ App.IndexController = Ember.Controller.extend({
   }.property()
 });
 
-App.AboutController = Ember.Controller.extend({
-  contactName: 'Corey',
-  avatar: 'images/avatar.png',
-  open: function() {
-    var day = (new Date().getDay());
-    if ( day !== 0 ) {
-      return 'Open';
-    } else {
-      return 'Closed';
-    }
-  }.property()
-});
-
 App.ProductsRoute = Ember.Route.extend({
   model: function() {
     return App.PRODUCTS;
@@ -43,6 +30,19 @@ App.ProductRoute = Ember.Route.extend({
   model: function(params) {
     return App.PRODUCTS.findBy('title', params.title);
   }
+});
+
+App.ContactsIndexController = Ember.Controller.extend({
+  contactName: 'Corey',
+  avatar: 'images/avatar.png',
+  open: function() {
+    var day = (new Date().getDay());
+    if ( day !== 0 ) {
+      return 'Open';
+    } else {
+      return 'Closed';
+    }
+  }.property()
 });
 
 App.ContactsRoute = Ember.Route.extend({
