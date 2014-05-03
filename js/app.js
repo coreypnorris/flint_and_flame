@@ -3,7 +3,6 @@ App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-  this.route('about');
   this.route('credits', { path: '/thanks' });
   this.resource('products', function() {
     this.resource('product', { path: '/:title' });
