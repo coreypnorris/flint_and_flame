@@ -51,6 +51,14 @@ App.ContactsRoute = Ember.Route.extend({
   }
 });
 
+App.Product = DS.Model.extend({
+  title: DS.attr('string'),
+  price: DS.attr('number'),
+  description: DS.attr('string'),
+  isOnSale: DS.attr('boolean'),
+  image: DS.attr('string')
+});
+
 App.PRODUCTS = [
   {
     title: 'Flint',
