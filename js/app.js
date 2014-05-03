@@ -2,6 +2,8 @@ App = Ember.Application.create({
   LOG_TRANSITIONS: true
 });
 
+App.ApplicationAdapter = DS.FixtureAdapter.extend();
+
 App.Router.map(function() {
   this.route('credits', { path: '/thanks' });
   this.resource('products', function() {
