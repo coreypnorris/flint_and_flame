@@ -97,12 +97,12 @@ App.Review = DS.Model.extend({
 App.Review.FIXTURES = [
   {
     id: 1,
-    product: 1
+    product: 1,
     text: 'Started a fire in no time!'
   },
   {
     id: 2,
-    product: 1
+    product: 1,
     text: 'Not the brightest flame, but warm!'
   }
 ]
