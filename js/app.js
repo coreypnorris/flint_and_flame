@@ -10,7 +10,7 @@ App.Router.map(function() {
     this.resource('product', { path: '/:product_id' });
   });
   this.resource('contacts', function() {
-    this.resource('contact', { path: '/:name' });
+    this.resource('contact', { path: '/:contact_id' });
   });
 });
 
@@ -49,7 +49,13 @@ App.ContactsIndexController = Ember.Controller.extend({
 
 App.ContactsRoute = Ember.Route.extend({
   model: function() {
-    return App.CONTACTS;
+    return this.store.findAll('contact');
+  }
+});
+
+App.ContactRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('contact', params.contact_id)
   }
 });
 
