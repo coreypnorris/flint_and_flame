@@ -93,6 +93,19 @@ App.Review = DS.Model.extend({
   product: DS.belongsTo('product')
 });
 
+App.Review.FIXTURES = [
+  {
+    id: 1,
+    product: 1
+    text: 'Started a fire in no time!'
+  },
+  {
+    id: 2,
+    product: 1
+    text: 'Not the brightest flame, but warm!'
+  }
+]
+
 App.Contact = DS.Model.extend({
   name: DS.attr('string'),
   about: DS.attr('string'),
