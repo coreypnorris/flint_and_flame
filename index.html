@@ -93,18 +93,20 @@
 
   <script type='text/x-handlebars' data-template-name='contacts'>
 
-    <h1>Contacts</h1>
-    <ul class="list-unstyled">
-      {{#each contact in model}}
-        <li class='row'>
-          <img {{bind-attr src='contact.avatar' alt='contact.name'}} class='img-thumbnail col-sm-5'/>
-          <div class='col-sm-7'>
-            <h2>{{#link-to 'contact' contact}}{{contact.name}}{{/link-to}}</h2>
-            <p>{{contact.about}}</p>
-          </div>
-      </li>
-      {{/each}}
-    </ul>
+    <div class='row'>
+      <div class='col-sm-9'>
+        {{outlet}}
+      </div>
+      <div class='col-sm-3'>
+        <div class='list-group'>
+          {{#each}}
+            {{#link-to 'contact' this classNames='list-group-item'}}
+              {{name}}
+            {{/link-to}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
