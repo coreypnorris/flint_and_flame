@@ -80,6 +80,12 @@ App.Product.FIXTURES = [
   }
 ];
 
+App.Contact = DS.Model.extend({
+  name: DS.attr('string'),
+  about: DS.attr('string'),
+  avatar: DS.attr('string')
+});
+
 App.CONTACTS = [
   {
     name: 'Giamia',
