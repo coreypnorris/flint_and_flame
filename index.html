@@ -57,19 +57,16 @@
 
   <script type='text/x-handlebars' data-template-name='products'>
 
-    <h1>Products</h1>
-    <ul class="list-unstyled">
-      {{#each product in model}}
-        <li class="row">
-          <img {{bind-attr src='product.image' alt='product.title'}} class='img-thumbnail col-sm-5' />
-          <div class='col-sm-7'>
-            <h2>{{product.title}}</h2>
-            <p class='product-description'>{{product.description}}</p>
-            <p>{{#link-to 'product' product tagName='button' class='btn btn-success'}}Buy for ${{product.price}}{{/link-to}}</p>
-          </div>
-        </li>
-      {{/each}}
-    </ul>
+    <div class='row'>
+      <div class='col-sm-3'>
+        <div class='list-group'>
+          {{#each}}
+            {{#link-to 'product' this classNames='list-group-item'}}
+              {{title}}
+            {{/link-to}}
+          {{/each}}
+        </div>
+      </div>
 
   </script>
 
