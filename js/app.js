@@ -7,7 +7,7 @@ App.ApplicationAdapter = DS.FixtureAdapter.extend();
 App.Router.map(function() {
   this.route('credits', { path: '/thanks' });
   this.resource('products', function() {
-    this.resource('product', { path: '/:title' });
+    this.resource('product', { path: '/:product_id' });
   });
   this.resource('contacts', function() {
     this.resource('contact', { path: '/:name' });
@@ -24,13 +24,13 @@ App.IndexController = Ember.Controller.extend({
 
 App.ProductsRoute = Ember.Route.extend({
   model: function() {
-    return App.PRODUCTS;
+    return this.store.findAll('product');
   }
 });
 
 App.ProductRoute = Ember.Route.extend({
   model: function(params) {
-    return App.PRODUCTS.findBy('title', params.title);
+    return this.store.find('product', params.product_id);
   }
 });
 
