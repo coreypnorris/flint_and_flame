@@ -75,7 +75,8 @@ App.Product.FIXTURES = [
     price: 99,
     description: 'Flint is a hard, sedimentary cryptocrystalline form of the mineral quartz, categorized as a variety of chert.',
     isOnSale: true,
-    image: 'images/products/flint.png'
+    image: 'images/products/flint.png',
+    reviews: [1,2]
   },
   {
     id: 2,
