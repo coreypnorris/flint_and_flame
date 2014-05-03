@@ -37,7 +37,9 @@
           <img {{bind-attr src='logo'}} />
           Everything you need to make it through the winter.
         </p>
-        <p>Browse All {{productsCount}} Items &raquo;</p>
+        {{#link-to 'products' class='btn btn-primary btn-lg'}}
+          Browse All {{productsCount}} Items &raquo;
+        {{/link-to}}
         <p class='pull-right text-muted'>Rendered on {{time}}</p>
       </div>
   </script>
