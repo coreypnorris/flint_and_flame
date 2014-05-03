@@ -86,7 +86,7 @@ App.Contact = DS.Model.extend({
   avatar: DS.attr('string')
 });
 
-App.CONTACTS = [
+App.Contact.FIXTURES = [
   {
     name: 'Giamia',
     about: 'Although Giamia came from a humble spark of lightning, he quickly grew to be a great craftsman, providing all the warming instruments needed by those close to him.',
