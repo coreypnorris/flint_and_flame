@@ -65,7 +65,7 @@ App.Product = DS.Model.extend({
   description: DS.attr('string'),
   isOnSale: DS.attr('boolean'),
   image: DS.attr('string'),
-  reviews: DS.hasMany('review', { async: true })
+  reviews: DS.hasMany('review', { async: true }),
   crafter: DS.belongsTo('contact', { async: true })
 });
 
