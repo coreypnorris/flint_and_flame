@@ -65,7 +65,8 @@ App.Product = DS.Model.extend({
   description: DS.attr('string'),
   isOnSale: DS.attr('boolean'),
   image: DS.attr('string'),
-  reviews: DS.hasMany('review', {async: true})
+  reviews: DS.hasMany('review', { async: true })
+  crafter: DS.belongsTo('contact', { async: true })
 });
 
 App.Product.FIXTURES = [
@@ -110,7 +111,8 @@ App.Review.FIXTURES = [
 App.Contact = DS.Model.extend({
   name: DS.attr('string'),
   about: DS.attr('string'),
-  avatar: DS.attr('string')
+  avatar: DS.attr('string'),
+  products: DS.hasMany('product', { async: true })
 });
 
 App.Contact.FIXTURES = [
