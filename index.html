@@ -90,6 +90,7 @@
         <h2>{{title}}</h2>
         <h3 class='text-success'>${{price}}</h3>
         <p class='text-muted'>{{description}}</p>
+        <p>{{#link-to 'contact' crafter}}{{crafter.name}}{{/link-to}}</p>
         <h3>Reviews</h3>
         {{#each review in reviews}}
           <p>{{review.text}}</p>
