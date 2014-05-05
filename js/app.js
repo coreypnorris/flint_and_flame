@@ -33,7 +33,7 @@ App.ContactsController = Ember.ArrayController.extend({
 });
 
 App.ContactsIndexController = Ember.ObjectController.extend({
-  contactName: 'Corey',
+  contactName: Ember.computed.alias('name'),
   avatar: 'images/avatar.png',
   open: function() {
     var day = (new Date().getDay());
