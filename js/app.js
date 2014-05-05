@@ -22,18 +22,6 @@ App.IndexController = Ember.Controller.extend({
   }.property()
 });
 
-App.ProductsRoute = Ember.Route.extend({
-  model: function() {
-    return this.store.findAll('product');
-  }
-});
-
-App.ProductRoute = Ember.Route.extend({
-  model: function(params) {
-    return this.store.find('product', params.product_id);
-  }
-});
-
 App.ContactsIndexController = Ember.Controller.extend({
   contactName: 'Corey',
   avatar: 'images/avatar.png',
@@ -45,6 +33,18 @@ App.ContactsIndexController = Ember.Controller.extend({
       return 'Closed';
     }
   }.property()
+});
+
+App.ProductsRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.findAll('product');
+  }
+});
+
+App.ProductRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('product', params.product_id);
+  }
 });
 
 App.ContactsRoute = Ember.Route.extend({
@@ -67,6 +67,19 @@ App.Product = DS.Model.extend({
   image: DS.attr('string'),
   reviews: DS.hasMany('review', { async: true }),
   crafter: DS.belongsTo('contact', { async: true })
+});
+
+App.Contact = DS.Model.extend({
+  name: DS.attr('string'),
+  about: DS.attr('string'),
+  avatar: DS.attr('string'),
+  products: DS.hasMany('product', { async: true })
+});
+
+App.Review = DS.Model.extend({
+  text: DS.attr('string'),
+  reviewedAt: DS.attr('date'),
+  product: DS.belongsTo('product')
 });
 
 App.Product.FIXTURES = [
@@ -92,32 +105,6 @@ App.Product.FIXTURES = [
   }
 ];
 
-App.Review = DS.Model.extend({
-  text: DS.attr('string'),
-  reviewedAt: DS.attr('date'),
-  product: DS.belongsTo('product')
-});
-
-App.Review.FIXTURES = [
-  {
-    id: 1,
-    product: 1,
-    text: 'Started a fire in no time!'
-  },
-  {
-    id: 2,
-    product: 1,
-    text: 'Not the brightest flame, but warm!'
-  }
-]
-
-App.Contact = DS.Model.extend({
-  name: DS.attr('string'),
-  about: DS.attr('string'),
-  avatar: DS.attr('string'),
-  products: DS.hasMany('product', { async: true })
-});
-
 App.Contact.FIXTURES = [
   {
     id: 1,
@@ -134,3 +121,20 @@ App.Contact.FIXTURES = [
     products: [2]
   }
 ];
+
+App.Review.FIXTURES = [
+  {
+    id: 1,
+    product: 1,
+    text: 'Started a fire in no time!'
+  },
+  {
+    id: 2,
+    product: 1,
+    text: 'Not the brightest flame, but warm!'
+  }
+];
+
+
+
+
