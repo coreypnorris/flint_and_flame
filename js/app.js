@@ -35,7 +35,7 @@ App.ProductsIndexController = Ember.ArrayController.extend({
     return this.filter(function(product) {
       return product.get('price') < 500;
     });
-  }.property()
+  }.property('@each.price')
 });
 
 App.ContactsController = Ember.ArrayController.extend({
