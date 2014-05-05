@@ -186,6 +186,22 @@
     </div>
   </script>
 
+  <script type='text/x-handlebars' data-template-name='components/contact-details'>
+    <div class='col-sm-5'>
+      <img {{bind-attr src='avatar' alt='name'}} class='img-thumbnail img-rounded'/>
+    </div>
+    <div class='col-sm-7'>
+      <h2>{{name}}</h2>
+      <p>{{about}}</p>
+      <h3>Products</h3>
+      <ul>
+        {{#each product in products}}
+          <li>{{#link-to 'product' product}}{{product.title}}{{/link-to}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+
   <script src="js/libs/jquery-1.10.2.js"></script>
   <script src="js/libs/handlebars-1.1.2.js"></script>
   <script src="js/libs/ember-1.5.1.js"></script>
