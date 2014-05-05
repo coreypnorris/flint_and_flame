@@ -66,9 +66,9 @@
     <div class='row'>
       <div class='col-sm-3'>
         <div class='list-group'>
-          {{#each product in model}}
-            {{#link-to 'product' product classNames='list-group-item'}}
-              {{product.title}}
+          {{#each}}
+            {{#link-to 'product' this classNames='list-group-item'}}
+              {{title}}
             {{/link-to}}
           {{/each}}
         </div>
