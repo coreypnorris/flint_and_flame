@@ -45,15 +45,7 @@
     </div>
     <div class='row'>
       {{#each onSale}}
-        <div class="col-sm-4">
-          <img {{bind-attr src='image'}} class='img-thumbnail col-sm-5' />
-          <div class="col-sm-7">
-            <h2>{{title}}</h2>
-            <p class="product-description">{{description}}</p>
-            <p>{{#link-to 'product' this class='btn btn-success'}}
-              Buy for ${{price}}{{/link-to}}</p>
-          </div>
-        </div>
+        {{product-details product=this classNames='col-sm-4'}}
       {{/each}}
       <div class="col-sm-12">
         <p>{{#link-to 'products.onsale'}}Products currently on sale{{/link-to}}</p>
