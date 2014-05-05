@@ -65,6 +65,12 @@ App.ProductRoute = Ember.Route.extend({
   }
 });
 
+App.ProductIndexRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.findAll('product');
+  }
+});
+
 App.ContactsRoute = Ember.Route.extend({
   model: function() {
     return this.store.findAll('contact');
