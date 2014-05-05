@@ -103,6 +103,13 @@ App.ContactRoute = Ember.Route.extend({
   }
 });
 
+App.ProductDetailsComponent = Ember.Component.extend({
+  reviewsCount: Ember.computed.alias('product.reviews.length'),
+  hasReviews: function() {
+    return this.get('reviewsCount') > 0;
+  }.property('reviewsCount')
+});
+
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 App.Product = DS.Model.extend({
