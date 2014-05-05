@@ -9,6 +9,7 @@ App.Router.map(function() {
   this.resource('products', function() {
     this.resource('product', { path: '/:product_id' });
     this.route('onsale');
+    this.route('deals');
   });
   this.resource('contacts', function() {
     this.resource('contact', { path: '/:contact_id' });
