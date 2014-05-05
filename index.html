@@ -118,7 +118,7 @@
       <div class='col-sm-5'>
         <img {{bind-attr src='image'}} class='img-thumbnail img-rounded'/>
       </div>
-      {{contact-details contact=crafter classNames="row"}}
+      {{contact-details contact=crafter classNames='row'}}
     </div>
   </script>
 
@@ -191,12 +191,12 @@
       <img {{bind-attr src='avatar' alt='name'}} class='img-thumbnail img-rounded'/>
     </div>
     <div class='col-sm-7'>
-      <h2>{{name}}</h2>
-      <p>{{about}}</p>
+      <h2>{{contact.name}}</h2>
+      <p>{{contact.about}}</p>
       <h3>Products</h3>
       <ul>
-        {{#each product in products}}
-          <li>{{#link-to 'product' product}}{{product.title}}{{/link-to}}</li>
+        {{#each products}}
+          <li>{{#link-to 'product' this}}{{product.title}}{{/link-to}}</li>
         {{/each}}
       </ul>
     </div>
