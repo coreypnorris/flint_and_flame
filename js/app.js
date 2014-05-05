@@ -22,6 +22,10 @@ App.IndexController = Ember.Controller.extend({
   }.property()
 });
 
+App.ProductsController = Ember.ArrayController.extend({
+  sortProperties: ['title']
+});
+
 App.ContactsIndexController = Ember.Controller.extend({
   contactName: 'Corey',
   avatar: 'images/avatar.png',
