@@ -22,7 +22,7 @@ App.IndexController = Ember.ArrayController.extend({
   }.property(),
   onSale: function() {
     return this.filterBy('isOnSale').slice(0,3);
-  }.property(@each.isOnSale)
+  }.property('@each.isOnSale')
 
 });
 
