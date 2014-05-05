@@ -32,7 +32,7 @@ App.ContactsController = Ember.ArrayController.extend({
   sortProperties: ['name']
 });
 
-App.ContactsIndexController = Ember.Controller.extend({
+App.ContactsIndexController = Ember.ObjectController.extend({
   contactName: 'Corey',
   avatar: 'images/avatar.png',
   open: function() {
