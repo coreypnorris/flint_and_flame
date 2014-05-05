@@ -106,7 +106,6 @@
         <h2>{{title}}</h2>
         <h3 class='text-success'>${{price}}</h3>
         <p class='text-muted'>{{description}}</p>
-        <p>Crafted by {{#link-to 'contact' crafter}}{{crafter.name}}{{/link-to}}.</p>
         <h3>Reviews</h3>
         <ul>
           {{#each review in reviews}}
@@ -119,6 +118,7 @@
       <div class='col-sm-5'>
         <img {{bind-attr src='image'}} class='img-thumbnail img-rounded'/>
       </div>
+      {{contact-details contact=crafter classNames="row"}}
     </div>
   </script>
 
