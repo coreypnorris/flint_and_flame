@@ -87,6 +87,14 @@ App.ProductsOnsaleRoute = Ember.Route.extend({
   }
 });
 
+App.ProductsDealsRoute = Ember.Route.extend({
+  model: function() {
+    return this.modelFor('products').filter(function(product) {
+      return product.get('price') < 500;
+    });
+  }
+});
+
 App.ContactsRoute = Ember.Route.extend({
   model: function() {
     return this.store.findAll('contact');
