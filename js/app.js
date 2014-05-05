@@ -69,6 +69,12 @@ App.ContactsRoute = Ember.Route.extend({
   }
 });
 
+App.ContactsIndexRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('contact', 2)
+  }
+});
+
 App.ContactRoute = Ember.Route.extend({
   model: function(params) {
     return this.store.find('contact', params.contact_id)
