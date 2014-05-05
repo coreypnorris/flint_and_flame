@@ -2,8 +2,6 @@ App = Ember.Application.create({
   LOG_TRANSITIONS: true
 });
 
-App.ApplicationAdapter = DS.FixtureAdapter.extend();
-
 App.Router.map(function() {
   this.route('credits', { path: '/thanks' });
   this.resource('products', function() {
@@ -104,6 +102,8 @@ App.ContactRoute = Ember.Route.extend({
     return this.store.find('contact', params.contact_id)
   }
 });
+
+App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 App.Product = DS.Model.extend({
   title: DS.attr('string'),
