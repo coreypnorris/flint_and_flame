@@ -32,14 +32,6 @@ App.ProductsController = Ember.ArrayController.extend({
   sortProperties: ['title']
 });
 
-App.ProductsIndexController = Ember.ArrayController.extend({
-  deals: function() {
-    return this.filter(function(product) {
-      return product.get('price') < 500;
-    });
-  }.property('@each.price')
-});
-
 App.ContactsController = Ember.ArrayController.extend({
   sortProperties: ['name']
 });
