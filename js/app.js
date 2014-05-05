@@ -14,8 +14,10 @@ App.Router.map(function() {
   });
 });
 
-App.IndexController = Ember.Controller.extend({
-  productsCount: 3,
+App.IndexController = Ember.ArrayController.extend({
+  productsCount: function() {
+    return this.get('length');
+  }.property('length'),
   logo: 'images/logo-small.png',
   time: function(){
     return (new Date()).toDateString();
@@ -37,6 +39,12 @@ App.ContactsIndexController = Ember.Controller.extend({
       return 'Closed';
     }
   }.property()
+});
+
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.findAll('product');
+  }
 });
 
 App.ProductsRoute = Ember.Route.extend({
