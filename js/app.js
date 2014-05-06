@@ -103,6 +103,11 @@ App.ContactRoute = Ember.Route.extend({
   }
 });
 
+App.ProductView = Ember.View.extend({
+  isOnSale: Ember.computed.alias('controller.isOnSale'),
+  classNameBindings: ['isOnSale']
+});
+
 App.ProductDetailsComponent = Ember.Component.extend({
   reviewsCount: Ember.computed.alias('product.reviews.length'),
   hasReviews: function() {
